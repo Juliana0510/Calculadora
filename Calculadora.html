@@ -23,3 +23,31 @@
                 <li>Usar "Salir" para terminar la sesión</li>
             </ul>
         </div>
+        
+        <div class="calculator-form">
+            <h2>Realizar operación</h2>
+
+            <div class="input-group">
+                <label for="numero1">Primer Número:</label>
+                <!-- type="number" permite solo números, step="any" acepta decimales -->
+                <input type="number" id="numero1" placeholder="Ingresa el primer número" step="any"> 
+            </div>
+
+                <!-- Segundo número -->
+            <div class="input-group">
+                <label for="numero2">Segundo Número:</label>
+                <input type="number" id="numero2" placeholder="Ingresa el segundo número" step="any">
+            </div>
+
+                <!-- Lista desplegable para seleccionar la operación -->
+            <div class="input-group">
+                <label for="operacion">Operación:</label>
+                <select id="operacion">
+
+                    <option value="">-- Selecciona la operación a realizar --</option>
+                        <option value="suma">➕ Suma</option>
+                        <option value="resta">➖ Resta</option>
+                        <option value="multiplicacion">✖️ Multiplicación</option>
+                        <option value="division">➗ División</option>
+                </select>
+            </div>
