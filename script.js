@@ -355,7 +355,7 @@ function demostrarBucleWhile() {
             
             if (iteracion > 7) {
                 operacionUsuario = "salir";
-                console.log(“ Límite de demostraciones alcanzado, saliendo del bucle...");
+                console.log(" Límite de demostraciones alcanzado, saliendo del bucle...");
             }
         }
     }

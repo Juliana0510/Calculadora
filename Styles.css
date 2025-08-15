@@ -1,9 +1,8 @@
-{
+*{
     margin: 0;           /* Elimina márgenes por defecto */
     padding: 0;          /* Elimina padding por defecto */
     box-sizing: border-box;  /* Incluye border y padding en el ancho/alto total */
 }
-
 /* Estilos para todo el cuerpo de la página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente moderna */
