@@ -23,7 +23,7 @@
                 <li>Usar "Salir" para terminar la sesión</li>
             </ul>
         </div>
-        
+
         <div class="calculator-form">
             <h2>Realizar operación</h2>
 
@@ -51,3 +51,32 @@
                         <option value="division">➗ División</option>
                 </select>
             </div>
+            <!-- Botones de acción -->
+            <div class="button-group">
+                        <!-- onclick llama a las funciones JavaScript cuando se hace clic -->
+                        <button onclick="calcular()" class="btn-calcular">Calcular</button>
+                        <button onclick="limpiarCampos()" class="btn-limpiar"> Limpiar</button>
+                        <button onclick="iniciarBucle()" class="btn-bucle"> Bucle</button>
+                        <button onclick="salir()" class="btn-salir"> Salir</button>
+            </div>
+
+        </div>
+
+         <!-- Área donde se muestra el resultado -->
+        <div class="resultado-panel" id="resultado-panel" style="display: none;">
+            <h2>Resultado</h2>
+            <div id="resultado-contenido"></div>
+        </div>
+
+        <!-- Área para mostrar el historial de operaciones -->
+        <div class="historial-panel" id="historial-panel" style="display: none;">
+            <h2>Historial de Operaciones</h2>
+            <div id="historial-contenido"></div>
+            <button onclick="limpiarHistorial()" class="btn-limpiar-historial">Limpiar Historial</button>
+        </div>
+
+    <!-- Vinculación con el archivo JavaScript externo -->
+    <!-- Se coloca al final para que cargue después del HTML -->
+    <script src="script.js"></script>
+</body>
+</html>
