@@ -1,0 +1,332 @@
+{
+    margin: 0;           /* Elimina márgenes por defecto */
+    padding: 0;          /* Elimina padding por defecto */
+    box-sizing: border-box;  /* Incluye border y padding en el ancho/alto total */
+}
+
+/* Estilos para todo el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente moderna */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* Gradiente de fondo */
+    min-height: 100vh;   /* Altura mínima del 100% de la pantalla */
+    padding: 20px;       /* Espacio alrededor del contenido */
+    color: #333;         /* Color de texto por defecto */
+}
+
+/* Contenedor principal que centra y limita el ancho */
+.container {
+    max-width: 800px;    /* Ancho máximo */
+    margin: 0 auto;      /* Centra horizontalmente */
+    background: rgba(255, 255, 255, 0.95);  /* Fondo blanco semi-transparente */
+    border-radius: 20px;  /* Bordes redondeados */
+    padding: 30px;       /* Espacio interno */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  /* Sombra para efecto 3D */
+    backdrop-filter: blur(10px);  /* Efecto de desenfoque del fondo */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;   /* Centrado */
+    color: #4a5568;       /* Color gris oscuro */
+    margin-bottom: 30px;  /* Espacio debajo */
+    font-size: 2.5em;     /* Tamaño de fuente grande */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  /* Sombra del texto */
+}
+
+/* Títulos secundarios */
+h2 {
+    color: #2d3748;       /* Color más oscuro */
+    margin-bottom: 20px;  /* Espacio debajo */
+    font-size: 1.5em;     /* Tamaño medio */
+    border-bottom: 2px solid #4299e1;  /* Línea azul debajo */
+    padding-bottom: 10px;  /* Espacio entre texto y línea */
+}
+
+/* Panel de información general */
+.info-panel {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);  /* Gradiente azul claro */
+    padding: 20px;        /* Espacio interno */
+    border-radius: 15px;  /* Bordes redondeados */
+    margin-bottom: 30px;  /* Espacio debajo */
+    border-left: 5px solid #2196f3;  /* Borde izquierdo azul */
+}
+
+/* Lista dentro del panel de información */
+.info-panel ul {
+    margin-left: 20px;    /* Indentación */
+    line-height: 1.6;     /* Espaciado entre líneas */
+}
+
+.info-panel li {
+    margin-bottom: 8px;   /* Espacio entre elementos de la lista */
+    color: #1565c0;       /* Color azul para el texto */
+}
+
+/* Formulario principal de la calculadora */
+.calculator-form {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);  /* Gradiente gris claro */
+    padding: 25px;        /* Espacio interno */
+    border-radius: 15px;  /* Bordes redondeados */
+    margin-bottom: 30px;  /* Espacio debajo */
+    border: 2px solid #dee2e6;  /* Borde gris claro */
+}
+
+/* Grupo de cada campo de entrada (label + input) */
+.input-group {
+    margin-bottom: 20px;  /* Espacio entre grupos */
+}
+
+/* Etiquetas de los campos */
+.input-group label {
+    display: block;       /* Ocupa toda la línea */
+    margin-bottom: 8px;   /* Espacio debajo */
+    font-weight: 600;     /* Texto en negrilla */
+    color: #495057;       /* Color gris oscuro */
+    font-size: 1.1em;     /* Tamaño ligeramente mayor */
+}
+
+/* Campos de entrada de números */
+.input-group input[type="number"] {
+    width: 100%;          /* Ancho completo */
+    padding: 12px 15px;   /* Espacio interno */
+    border: 2px solid #ced4da;  /* Borde gris */
+    border-radius: 8px;   /* Bordes redondeados */
+    font-size: 16px;      /* Tamaño de fuente */
+    background-color: #ffffff;  /* Fondo blanco */
+    transition: all 0.3s ease;  /* Transición suave para efectos */
+}
+
+/* Efecto cuando el campo está enfocado (seleccionado) */
+.input-group input[type="number"]:focus {
+    outline: none;        /* Quita el borde por defecto del navegador */
+    border-color: #4299e1;  /* Cambia el borde a azul */
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);  /* Sombra azul */
+    transform: translateY(-2px);  /* Levanta ligeramente el campo */
+}
+
+/* Lista desplegable para operaciones */
+.input-group select {
+    width: 100%;          /* Ancho completo */
+    padding: 12px 15px;   /* Espacio interno */
+    border: 2px solid #ced4da;  /* Borde gris */
+    border-radius: 8px;   /* Bordes redondeados */
+    font-size: 16px;      /* Tamaño de fuente */
+    background-color: #ffffff;  /* Fondo blanco */
+    cursor: pointer;      /* Cursor de mano al pasar sobre él */
+    transition: all 0.3s ease;  /* Transición suave */
+}
+
+/* Efecto cuando la lista desplegable está enfocada */
+.input-group select:focus {
+    outline: none;        /* Quita el borde por defecto */
+    border-color: #4299e1;  /* Cambia el borde a azul */
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);  /* Sombra azul */
+}
+
+/* Contenedor de botones */
+.button-group {
+    display: flex;        /* Layout flexible */
+    gap: 15px;            /* Espacio entre botones */
+    justify-content: center;  /* Centra los botones */
+    flex-wrap: wrap;      /* Permite que se envuelvan en pantallas pequeñas */
+    margin-top: 25px;     /* Espacio arriba */
+}
+
+/* Estilos base para todos los botones */
+button {
+    padding: 12px 25px;   /* Espacio interno */
+    border: none;         /* Sin borde */
+    border-radius: 25px;  /* Botones redondeados */
+    font-size: 16px;      /* Tamaño de fuente */
+    font-weight: 600;     /* Texto en negrilla */
+    cursor: pointer;      /* Cursor de mano */
+    transition: all 0.3s ease;  /* Transición suave para efectos */
+    min-width: 120px;     /* Ancho mínimo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra */
+}
+
+/* Botón de calcular (verde) */
+.btn-calcular {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);  /* Gradiente verde */
+    color: white;         /* Texto blanco */
+}
+
+.btn-calcular:hover {
+    transform: translateY(-3px);  /* Se eleva al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);  /* Sombra más intensa */
+}
+
+/* Botón de limpiar (azul) */
+.btn-limpiar {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);  /* Gradiente azul */
+    color: white;         /* Texto blanco */
+}
+
+.btn-limpiar:hover {
+    transform: translateY(-3px);  /* Se eleva al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4);  /* Sombra más intensa */
+}
+
+/* Botón de salir (rojo) */
+.btn-salir {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);  /* Gradiente rojo */
+    color: white;         /* Texto blanco */
+}
+
+.btn-salir:hover {
+    transform: translateY(-3px);  /* Se eleva al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(245, 101, 101, 0.4);  /* Sombra más intensa */
+}
+
+/* Botón de pruebas (morado) */
+.btn-bucle {
+    background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);  /* Gradiente morado */
+    color: white;         /* Texto blanco */
+}
+
+.btn-pruebas:hover {
+    transform: translateY(-3px);  /* Se eleva al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(159, 122, 234, 0.4);  /* Sombra más intensa */
+}
+
+/* Panel de resultados */
+.resultado-panel {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);  /* Gradiente verde claro */
+    padding: 20px;        /* Espacio interno */
+    border-radius: 15px;  /* Bordes redondeados */
+    margin-bottom: 30px;  /* Espacio debajo */
+    border-left: 5px solid #28a745;  /* Borde izquierdo verde */
+}
+
+/* Contenido del resultado */
+#resultado-contenido {
+    font-size: 18px;      /* Tamaño de fuente mayor */
+    font-weight: 600;     /* Texto en negrilla */
+    color: #155724;       /* Color verde oscuro */
+    text-align: center;   /* Centrado */
+    padding: 15px;        /* Espacio interno */
+    background: rgba(255, 255, 255, 0.7);  /* Fondo blanco semi-transparente */
+    border-radius: 10px;  /* Bordes redondeados */
+}
+
+/* Panel del historial */
+.historial-panel {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);  /* Gradiente amarillo */
+    padding: 20px;        /* Espacio interno */
+    border-radius: 15px;  /* Bordes redondeados */
+    margin-bottom: 30px;  /* Espacio debajo */
+    border-left: 5px solid #ffc107;  /* Borde izquierdo amarillo */
+}
+
+/* Contenido del historial */
+#historial-contenido {
+    max-height: 200px;    /* Altura máxima */
+    overflow-y: auto;     /* Scroll vertical si excede la altura */
+    background: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente */
+    padding: 15px;        /* Espacio interno */
+    border-radius: 10px;  /* Bordes redondeados */
+    margin-bottom: 15px;  /* Espacio debajo */
+}
+
+/* Elementos individuales del historial */
+.historial-item {
+    padding: 8px 12px;    /* Espacio interno */
+    margin-bottom: 8px;   /* Espacio entre elementos */
+    background: rgba(255, 255, 255, 0.9);  /* Fondo casi blanco */
+    border-radius: 5px;   /* Bordes redondeados */
+    border-left: 3px solid #ffc107;  /* Borde izquierdo amarillo */
+    font-family: 'Courier New', monospace;  /* Fuente monoespaciada */
+}
+
+/* Botón para limpiar historial */
+.btn-limpiar-historial {
+    background: linear-gradient(135deg, #fd7e14 0%, #e8590c 100%);  /* Gradiente naranja */
+    color: white;         /* Texto blanco */
+    padding: 8px 15px;    /* Espacio interno menor */
+    font-size: 14px;      /* Fuente más pequeña */
+}
+
+.btn-limpiar-historial:hover {
+    transform: translateY(-2px);  /* Se eleva menos */
+    box-shadow: 0 4px 15px rgba(253, 126, 20, 0.4);  /* Sombra naranja */
+}
+
+/* Panel de pruebas */
+.pruebas-panel {
+    background: linear-gradient(135deg, #e1bee7 0%, #ce93d8 100%);  /* Gradiente morado claro */
+    padding: 20px;        /* Espacio interno */
+    border-radius: 15px;  /* Bordes redondeados */
+    border-left: 5px solid #9c27b0;  /* Borde izquierdo morado */
+}
+
+/* Resultado de las pruebas */
+#pruebas-resultado {
+    margin-top: 20px;     /* Espacio arriba */
+    padding: 15px;        /* Espacio interno */
+    background: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente */
+    border-radius: 10px;  /* Bordes redondeados */
+    font-family: 'Courier New', monospace;  /* Fuente monoespaciada */
+    white-space: pre-line;  /* Respeta los saltos de línea */
+    max-height: 300px;    /* Altura máxima */
+    overflow-y: auto;     /* Scroll si excede la altura */
+}
+
+/* Efectos especiales para mensajes de error */
+.error {
+    color: #dc3545;       /* Color rojo */
+    font-weight: bold;    /* Texto en negrilla */
+    background: rgba(248, 215, 218, 0.8);  /* Fondo rojo claro */
+    padding: 10px;        /* Espacio interno */
+    border-radius: 5px;   /* Bordes redondeados */
+    border-left: 4px solid #dc3545;  /* Borde izquierdo rojo */
+}
+
+/* Efectos especiales para mensajes de éxito */
+.success {
+    color: #28a745;       /* Color verde */
+    font-weight: bold;    /* Texto en negrilla */
+    background: rgba(212, 237, 218, 0.8);  /* Fondo verde claro */
+    padding: 10px;        /* Espacio interno */
+    border-radius: 5px;   /* Bordes redondeados */
+    border-left: 4px solid #28a745;  /* Borde izquierdo verde */
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;      /* Márgenes menores */
+        padding: 20px;     /* Padding menor */
+    }
+    
+    .button-group {
+        flex-direction: column;  /* Botones en columna */
+        align-items: center;     /* Centrados */
+    }
+    
+    button {
+        width: 100%;       /* Botones de ancho completo */
+        margin-bottom: 10px;  /* Espacio entre botones */
+    }
+    
+    h1 {
+        font-size: 2em;    /* Título más pequeño */
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;        /* Invisible */
+        transform: translateY(20px);  /* Desplazado hacia abajo */
+    }
+    to {
+        opacity: 1;        /* Visible */
+        transform: translateY(0);     /* Posición normal */
+    }
+}
+
+/* Aplicar animación a los paneles cuando aparecen */
+.resultado-panel,
+.historial-panel {
+    animation: fadeIn 0.5s ease-in-out;  /* Animación de aparición */
+}
